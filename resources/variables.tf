@@ -21,5 +21,5 @@ variable "environment" {
 }
 variable "bucket_name" {
   type = string
-  default = "demo"
+  default = "cml-aws-srs"
 }
