@@ -35,7 +35,7 @@ module "stack_1" {
   instance_type = var.instance_type
   instanceCount = var.instanceCount ## no of instance
   subnet_id = module.vpc.subnet_id
-  depends_on    = [module.vpc]
+  depends_on    = [module.vpc, module.iam]
 }
 
 ########################################################################################################
@@ -48,7 +48,7 @@ module "stack_2" {
   instance_type = var.instance_type
   instanceCount = var.instanceCount ## no of instance
   subnet_id = module.vpc.subnet_id
-  depends_on    = [module.vpc]
+  depends_on    = [module.vpc, module.iam]
 }
 ########################################################################################################
 ########################################################################################################
@@ -60,7 +60,7 @@ module "stack_3" {
   instance_type = var.instance_type
   instanceCount = var.instanceCount ## no of instance
   subnet_id = module.vpc.subnet_id 
-  depends_on    = [module.vpc]
+  depends_on    = [module.vpc, module.iam]
 }
 ########################################################################################################
 ########################################################################################################
@@ -71,7 +71,7 @@ module "stack_4" {
   instance_type = var.instance_type
   instanceCount = var.instanceCount ## no of instance
   subnet_id = module.vpc.subnet_id
-  depends_on    = [module.vpc]
+  depends_on    = [module.vpc, module.iam]
   
 }
 ########################################################################################################
