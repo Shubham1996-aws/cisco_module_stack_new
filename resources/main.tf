@@ -35,6 +35,7 @@ module "stack_1" {
   instance_type = var.instance_type
   instanceCount = var.instanceCount ## no of instance
   subnet_id = module.vpc.subnet_id
+  eip_association_id = module.vpc.eip_id[0]
   depends_on    = [module.vpc, module.iam]
 }
 
@@ -48,6 +49,7 @@ module "stack_2" {
   instance_type = var.instance_type
   instanceCount = var.instanceCount ## no of instance
   subnet_id = module.vpc.subnet_id
+  eip_association_id = module.vpc.eip_id[1]
   depends_on    = [module.vpc, module.iam]
 }
 ########################################################################################################
@@ -59,7 +61,8 @@ module "stack_3" {
   source = "../modules/aws/ec2"
   instance_type = var.instance_type
   instanceCount = var.instanceCount ## no of instance
-  subnet_id = module.vpc.subnet_id 
+  subnet_id = module.vpc.subnet_id
+  eip_association_id = module.vpc.eip_id[2]
   depends_on    = [module.vpc, module.iam]
 }
 ########################################################################################################
@@ -71,6 +74,7 @@ module "stack_4" {
   instance_type = var.instance_type
   instanceCount = var.instanceCount ## no of instance
   subnet_id = module.vpc.subnet_id
+  eip_association_id = module.vpc.eip_id[3]
   depends_on    = [module.vpc, module.iam]
   
 }
