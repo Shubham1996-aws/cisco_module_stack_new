@@ -16,6 +16,10 @@ variable "instanceCount" {
     type = number
 }
 
+variable "eip_association_id" {
+    type = string
+}
+
 variable "environment" {
     type = string
     default = "testing"
