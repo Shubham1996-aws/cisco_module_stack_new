@@ -1,6 +1,6 @@
 variable "vpn_range" {
   type = list(string)
-  default = [ ""]
+  default = ["0.0.0.0/0"]
 }
 variable "vpc_cidr_block" {
     type = string
