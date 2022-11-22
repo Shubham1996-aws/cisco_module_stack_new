@@ -3,15 +3,15 @@ data "aws_availability_zones" "azs" {
 }
 
 ### instance ###
-/*data "aws_ami" "amazon" {
+data "aws_ami" "amazon" {
   most_recent = true
-  owners           = ["amazon"]
+  owners           = ["self"]
 
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-*"]
+    values = ["cml_cisco_on_aws"]
   }
-}*/
+}
 
 data "aws_iam_instance_profile" "instance_profile" {
   name = "ssm_instance_profile"
@@ -36,7 +36,7 @@ resource "aws_eip_association" "eip_assoc" {
 }
 resource "aws_instance" "web-server" {
   count = var.instanceCount
-  ami           = var.ami_id
+  ami           = data.aws_ami.amazon.id
   instance_type = var.instance_type
   associate_public_ip_address = true
   subnet_id = var.subnet_id
