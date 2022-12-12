@@ -26,6 +26,9 @@ variable "eip_assoc_id" {
 variable "ebs_volume_size" {
   type = number
 }
+variable "key_name" {
+  type = string
+}
 locals {
   common_tags = {
     DataTaxonomy        = "Cisco Operatoins Data"
