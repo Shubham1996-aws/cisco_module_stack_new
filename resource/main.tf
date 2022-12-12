@@ -49,6 +49,7 @@ module "stack_1" {
   environment     = "testing"
   eip_assoc_id    = module.vpc.allocation_id[0]
   ebs_volume_size = 10
+  key_name = var.key_name
   depends_on      = [module.vpc, module.iam]
 }
 
@@ -60,6 +61,7 @@ module "stack_1" {
   environment = "testing"
   eip_assoc_id = module.vpc.allocation_id[1]
   ebs_volume_size = 10
+  key_name = var.key_name  
   depends_on    = [module.vpc, module.iam]
 }
 
@@ -71,6 +73,7 @@ module "stack_3" {
   environment = "testing"
   eip_assoc_id = module.vpc.allocation_id[2]
   ebs_volume_size = 10
+  key_name = var.key_name  
   depends_on    = [module.vpc, module.iam]
 }
 
@@ -82,6 +85,7 @@ module "stack_4" {
   environment = "testing"
   eip_assoc_id = module.vpc.allocation_id[3]
   ebs_volume_size = 10
+  key_name = var.key_name  
   depends_on    = [module.vpc, module.iam]
   
 }*/
