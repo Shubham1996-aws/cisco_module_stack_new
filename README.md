@@ -1,35 +1,19 @@
 #### cisco-cml-on-aws ####
---------------------------
 
-Pre-requisties:
--------------
-* Terraform 
-* aws
 
-Providers:
----------
-* aws
+## Pre-requisties:
+- Terraform 
+- aws
 
-Resources:
----------
-* aws_vpc
-* aws_subnet
-* aws_route_table
-* aws_internet_gateway
-* aws_security-group
-* aws_iam_role
-* aws_iam_policy
-* aws_s3
-* aws_eip
-* aws_instance
+## Steps:-
+- Import to snapshot from VMDK
+   - Type `aws ec2 import-snapshot
+--disk-container Format=VMDK,UserBucket={S3Bucket=<Bucket_name>,S3Key=<Bucket_key>}` , to import VMDK to snapshot.
 
-CLI:
----
-* To perform specific stack 
+- Import Snapshot to AMI
+   - Type `aws ec2 register-image
+--name <Image_name>
+--root-device-name /dev/xvda
+--block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=<snapshot_id>} DeviceName=/dev/xvdf,Ebs={VolumeSize=100}` , to import AMI from snapshot.
 
->> terraform apply/destroy -target="module.<module_name>"
-
-* To use environment based variables
-
->> terraform apply/destroy -target="module.<module_name>" -var-file="<vars_file_name>"
-
+- Running Jenkins Job
