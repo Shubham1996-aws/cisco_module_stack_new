@@ -50,3 +50,6 @@ variable "privateSubnets2_cidr_block" {
   type    = string
   default = "10.0.40.0/24"
 }
+variable "key_name" {
+  type = string
+}
