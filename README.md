@@ -1,6 +1,6 @@
 ## Steps:-
 - Prepare containers.json:-
-   `{
+   {
     
     "Description": "My server VMDK",
     
@@ -14,7 +14,7 @@
     
     }
 
-}`
+}
   
   Reference: https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-import-snapshot.html
 - Import to snapshot from VMDK
