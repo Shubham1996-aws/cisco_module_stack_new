@@ -17,3 +17,4 @@
 --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=<snapshot_id>} DeviceName=/dev/xvdf,Ebs={VolumeSize=100}` , to import AMI from snapshot.
 
 - Running Jenkins Job
+ ![image](https://user-images.githubusercontent.com/69294193/207245155-5d7459db-16b8-4710-8c6c-f6ba2a7a1ae0.png)
