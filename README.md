@@ -16,6 +16,8 @@
   
   https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/job/learning-platform/job/cisco-cml-aws/job/main/
   
+  - Jenkins console:-
+     Click on link > Build 
 ## To Manage AWS Credentials:
   https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/credentials/store/folder/domain/_/credential/cisco_modeling_lab/ 
 
