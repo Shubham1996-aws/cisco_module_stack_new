@@ -9,9 +9,8 @@
 --root-device-name /dev/xvda --boot-mode uefi
 --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=<snapshot_id>} DeviceName=/dev/xvdf,Ebs={VolumeSize=100}` , to import AMI from snapshot.
 
-- Running Jenkins Job
-  
-      https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/job/learning-platform/job/cisco-cml-aws/job/main/
+- Running Jenkins Job:
+  https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/job/learning-platform/job/cisco-cml-aws/job/main/
 
 ## Application which is running on server
 
