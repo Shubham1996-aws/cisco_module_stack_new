@@ -39,7 +39,7 @@ resource "aws_eip_association" "eip_assoc" {
 resource "aws_instance" "web-server" {
   count                       = var.instanceCount
   ami                         = var.ami_id
-  key_name                    = var.key_name
+  key_name                    = ${var.key_name  != "" ? var.key_name : "" }
   instance_type               = var.instance_type
   associate_public_ip_address = true
   subnet_id                   = var.subnet_id
