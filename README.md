@@ -5,15 +5,19 @@
 
 - Import Snapshot to AMI
    - Type `aws ec2 register-image
---name <Image_name> 
+--name cisco-cml-on-aws 
 --root-device-name /dev/xvda --boot-mode uefi
---block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=<snapshot_id>} DeviceName=/dev/xvdf,Ebs={VolumeSize=100}` , to import AMI from snapshot.
+--block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=<snapshot_id>} DeviceName=/dev/xvdf,Ebs={VolumeSize=50}` , to import AMI from snapshot.
 
-- Running Jenkins Job:
+## To Provision Stack from Jenkins:
+    
+    ![image](https://user-images.githubusercontent.com/69294193/207291650-f4f84213-c706-4e50-8ce5-f1cd2f538a7f.png)
+
   
+  https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/job/learning-platform/job/cisco-cml-aws/job/main/
   
-- Location to manage Jenkins_credentials:
- 
+## To Manage AWS Credentials:
+  https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/credentials/store/folder/domain/_/credential/cisco_modeling_lab/ 
 
 ## Application which is running on server
 
