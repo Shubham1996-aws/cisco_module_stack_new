@@ -11,7 +11,7 @@
 
 ## To Provision Stack from Jenkins:
     
-    ![image](https://user-images.githubusercontent.com/69294193/207291650-f4f84213-c706-4e50-8ce5-f1cd2f538a7f.png)
+   ![image](https://user-images.githubusercontent.com/69294193/207291650-f4f84213-c706-4e50-8ce5-f1cd2f538a7f.png)
 
   
   https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/job/learning-platform/job/cisco-cml-aws/job/main/
