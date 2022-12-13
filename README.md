@@ -29,3 +29,4 @@
 - Application running on `9090`
       `<public_ip:9090>`
  
+    ![image](https://user-images.githubusercontent.com/69294193/207246424-60823eb0-6bb3-46ec-905e-ef170e41c5d0.png)
