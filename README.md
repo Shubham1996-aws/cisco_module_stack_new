@@ -11,7 +11,7 @@
 
 - Running Jenkins Job
   
-      `https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/job/learning-platform/job/cisco-cml-aws/job/main/`
+      https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/job/learning-platform/job/cisco-cml-aws/job/main/
 
 ## Application which is running on server
 
