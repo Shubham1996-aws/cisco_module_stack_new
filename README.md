@@ -18,7 +18,7 @@
 ## Application which is running on server
 
 - Application running on `443`
-    `<public_ip:443>`
+    `<eip:443>`
                   
      ![image](https://user-images.githubusercontent.com/69294193/207246036-3e0df538-0e1c-464a-a8a6-095c66c95177.png)
 
@@ -26,6 +26,6 @@
     
 
 - Application running on `9090`
-      `<public_ip:9090>`
+      `<eip:9090>`
  
     ![image](https://user-images.githubusercontent.com/69294193/207246424-60823eb0-6bb3-46ec-905e-ef170e41c5d0.png)
