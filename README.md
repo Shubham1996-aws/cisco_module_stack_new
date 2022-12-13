@@ -8,6 +8,7 @@
         "S3Key": "<S3_bucket_key>"
     }
 }`
+  
   Reference: https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-import-snapshot.html
 - Import to snapshot from VMDK
    - Type `aws ec2 import-snapshot \
