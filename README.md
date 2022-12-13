@@ -10,10 +10,10 @@
 --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=<snapshot_id>} DeviceName=/dev/xvdf,Ebs={VolumeSize=100}` , to import AMI from snapshot.
 
 - Running Jenkins Job:
-  https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/job/learning-platform/job/cisco-cml-aws/job/main/
+  
   
 - Location to manage Jenkins_credentials:
-  https://engci-jenkins-rtp.cisco.com/jenkins/job/learning-platform/credentials/store/folder/domain/_/credential/cisco_modeling_lab/ 
+ 
 
 ## Application which is running on server
 
