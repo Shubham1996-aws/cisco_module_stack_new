@@ -1,14 +1,23 @@
 ## Steps:-
 - Prepare containers.json:-
-   https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-import-snapshot.html
+   `{
+    "Description": "My server VMDK",
+    "Format": "VMDK",
+    "UserBucket": {
+        "S3Bucket": "<bucket_name>",
+        "S3Key": "<S3_bucket_key>"
+    }
+}`
+  Reference: https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-import-snapshot.html
 - Import to snapshot from VMDK
-   - Type `aws ec2 import-snapshot
+   - Type `aws ec2 import-snapshot \
 --disk-container Format=VMDK,UserBucket={S3Bucket=<Bucket_name>,S3Key=<Bucket_key>}` , to import VMDK to snapshot.
 
 - Import Snapshot to AMI
-   - Type `aws ec2 register-image
---name cisco-cml-on-aws 
---root-device-name /dev/xvda --boot-mode uefi
+   - Type `aws ec2 register-image \
+--name cisco-cml-on-aws \
+--root-device-name /dev/xvda \
+--boot-mode uefi \
 --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=<snapshot_id>} DeviceName=/dev/xvdf,Ebs={VolumeSize=50}` , to import AMI from snapshot.
 
 ## To Provision Stack from Jenkins:
