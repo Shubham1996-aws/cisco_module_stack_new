@@ -1,4 +1,6 @@
 ## Steps:-
+- Prepare containers.json:-
+   https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-import-snapshot.html
 - Import to snapshot from VMDK
    - Type `aws ec2 import-snapshot
 --disk-container Format=VMDK,UserBucket={S3Bucket=<Bucket_name>,S3Key=<Bucket_key>}` , to import VMDK to snapshot.
