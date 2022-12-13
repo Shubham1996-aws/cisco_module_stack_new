@@ -1,5 +1,3 @@
-#### cisco-cml-on-aws ####
-
 
 ## Pre-requisties:
 - Terraform 
@@ -12,10 +10,22 @@
 
 - Import Snapshot to AMI
    - Type `aws ec2 register-image
---name <Image_name>
---root-device-name /dev/xvda
+--name <Image_name> 
+--root-device-name /dev/xvda --boot-mode uefi
 --block-device-mappings DeviceName=/dev/xvda,Ebs={SnapshotId=<snapshot_id>} DeviceName=/dev/xvdf,Ebs={VolumeSize=100}` , to import AMI from snapshot.
 
 - Running Jenkins Job
- ![image](https://user-images.githubusercontent.com/69294193/207245325-40c20dea-7869-455a-941a-7358a7887eae.png)
 
+## Application which is running on server
+
+- Application running on `443`
+    `<public_ip:443>`
+                  
+     ![image](https://user-images.githubusercontent.com/69294193/207246036-3e0df538-0e1c-464a-a8a6-095c66c95177.png)
+
+          
+    
+
+- Application running on `9090`
+      `<public_ip:9090>`
+ 
